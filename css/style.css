@@ -1,0 +1,72 @@
+
+body {
+    border : 10px solid red;
+    color:rgb(201, 76, 76);
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-family: serif;
+    font-size: 28px;
+    background-image: url("../images/pic10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+  .bb{
+      opacity: 0.9;
+  }
+  .h {
+    background-color: rgb(255,255,255,0.1);
+    color: yellow;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+  }
+
+  .p {
+    background-color: black;
+    color: violet;
+    text-align: center;
+    display: inline-block;
+    font-size: 34px;
+  }
+  .mm {
+    background-color: black;
+  }
+  .button {
+    background-color: rgb(201, 76, 76);
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 40px;
+    margin: 10px 50px;
+    border: 2px solid #555555;
+    cursor: pointer;
+  }
+  .fa {
+    background: #3B5998;
+    color: black;
+  }
+  a:visited {
+    color: white;
+  }
+  a:hover {
+    color: yellow;
+  }
+  @media screen and (max-width: 1000px) {
+    body {
+      /* background-color: purple; */
+      color: yellow;
+      height: auto;
+      border: 10px solid gold ;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    body {
+      /* background-color: purple; */
+      color: violet;
+      height: auto;
+      border: 10px solid green;
+    }
+  }

@@ -1,0 +1,127 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        .align-self-center {
+            display: flex;
+        }
+        .hr1{
+            width: 50%;
+            background-color: grey;
+        }
+        #profilepic{
+            padding-left: 60px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+      
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+</head>
+<body>
+
+<br><br>
+<div class="row ">
+  <div class="col">
+      <div class="text-center mb-3">
+        <a href="./homepage.html"><input class="btn btn-primary btn-md pull-right align-self-end" type="button" value="Go Back"></a>
+      </div>
+  </div>
+</div>
+
+<div class="row justify-content-center align-self-center mt-5 h-100">
+  <div class="bg-light container col-7">
+    <p class="h4 text-black text-center p-2 mt-3">Join Us</p>
+    <div class="container p-1">
+      <form id="SignUpForm" method="POST" action=""> 
+        <!-- can you add the login dpage address here in the action="", it will work then most likely -->
+        
+        <div class="form-group row justify-content-center">
+          <label for="fullName" class="col-sm-2 col-form-label">Fullname</label>
+          <div class="col-sm-9 col-md-5 ">
+            <input type="text" class="form-control" id="fullName" placeholder="Fullname" name="fullName">
+          </div>
+        </div>   
+
+        <div class="form-group row justify-content-center">
+            <label for="userName" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-9 col-md-5">
+              <input type="text" class="form-control" id="userName" placeholder="Username" name="userName">
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-9 col-md-5">
+            <input type="email" class="form-control" id="emailFieldSignUp" placeholder="Email" name="email">
+          </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <label for="password" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-9 col-md-5">
+            <input type="password" class="form-control" id="passFieldSignUp" placeholder="Password" name="password">
+          </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+          <label for="password2" class="col-sm-2 col-form-label">Re-password</label>
+          <div class="col-sm-9 col-md-5 ">
+            <input type="password" class="form-control" id="password2" placeholder="Re-password" name="password2">
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center" id="profilepic">
+            <label for="file" class="col-sm-3 col-form-label pl-20">Profile photo</label>
+            <div class="btn btn-mdb-color btn-rounded float-left justify-content-end">
+              <input class="ml-4" name="file" type="file">
+            </div>
+        </div>      
+       
+        <div class="row justify-content-end align-self-center">
+          <div class="col-sm-7 flex-d justify-content-start align-self-center">
+            <button type="submit" class="btn btn-info btn-block my-4 col-md-3">Sign Up</button>
+          </div>
+        </div>
+
+        <hr class="hr1">
+        <p><a href="login.html" class="text-muted justify-content-center align-self-center">Already a member? Click here</a></p>
+
+      </form>
+    </fieldset>
+    </div>
+  </div>
+</div>
+<!-- DIDNT ADD ANY ROUTES IN SIGN IN OR SIGN UP, ONLY MEMBERS LOGGED IN CAN BROWSE THE LSITS -->
+<br><br><br><br><br>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB0h-8BktUPIkG-75f4AVZp1Psn3FNdErc",
+      authDomain: "testloginweb-d8661.firebaseapp.com",
+      databaseURL: "https://testloginweb-d8661.firebaseio.com",
+      projectId: "testloginweb-d8661",
+      storageBucket: "testloginweb-d8661.appspot.com",
+      messagingSenderId: "24204990156",
+      appId: "1:24204990156:web:7234ebae29595996471469",
+      measurementId: "G-7DZDLW8SYK"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+</script>
+<script src="JS/firebaseSignup.js"></script>
+</body>
+</html>

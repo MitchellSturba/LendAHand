@@ -1,0 +1,180 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Listings</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> TURNING THIS ON MAY EFFECT THE BACKGROUND IMAGE FOR THIS PAGE-->
+    <style>
+        .forum-container, .forum-post-container {
+            padding: 30px !important;
+        }
+        .forum-title {
+            margin: 15px 0 15px 0;
+        }
+        .forum-item {
+            margin: 10px 0;
+            padding: 10px 0 20px;
+            border-bottom: 1px solid #f1f1f1;
+            font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        a.forum-item-title {
+            color: inherit;
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        a.forum-item-title:hover {
+        text-decoration:none;
+        }
+        .forum-item .forum-sub-title {
+            color: #999;
+            margin-left: 50px;
+        }
+        .forum-info {
+            text-align: center;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+      
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <br><br>
+    <center><h1 id ="welcome">Welcome to LendAHand</h1></center>
+	<div class="container" id="routebuttons">
+		<div class="row ">
+			<div class="col">
+				<div class="text-center mb-3">
+				<a href="./taskListings.html"><input class="btn btn-primary btn-md pull-right align-self-end" type="button" value="All Listings"></a>
+				</div>
+			</div>
+			<div class="col">
+				<div class="text-center mb-3">
+				<a href="./userProfile.html"><input class="btn btn-primary btn-md pull-right align-self-end" type="button" value="Profile"></a>
+				</div>
+			</div>
+			<div class="col">
+				<div class="text-center mb-3">
+                    <form id ="signOutBut" method="POST" action="./homepage.html"> 
+				        <a href="./homepage.html"><button class="btn btn-primary btn-md pull-right align-self-end" onClick="logMeOut()" value="Sign Out">Sign Out</button></a>
+                    </form>
+                    <!-- THE LINK ABOVE IS NOT WORKING ON MY PC CAUSE ITS NOT ON MY PC, SO PLEASE MAKE SURE TO CHANGE IT TO THE CREATE A TASK PAGE -->
+				</div>
+			</div>
+			<div class="col">
+				<div class="text-center mb-3">
+				<a href="./createATask.html"><input class="btn btn-primary btn-md pull-right align-self-end" type="button" value="Create a task"></a>
+				<!-- THE LINK ABOVE IS NOT WORKING ON MY PC CAUSE ITS NOT ON MY PC, SO PLEASE MAKE SURE TO CHANGE IT TO THE CREATE A TASK PAGE -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+
+    <div class="ibox-content forum-container">
+        <div class="forum-title">
+            <h3>Volunteers Wanted</h3>
+        </div>
+        <hr>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 1 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 2 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." </div>
+                </div>               
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 3 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>                    
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 4 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>                        
+            </div>
+        </div>
+        <br>
+        <div class="forum-title">
+            <h3>Volunteers Available</h3>
+        </div>
+        <hr>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 5 - Title </a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 6 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 7 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>
+            </div>
+        </div>
+        <div class="forum-item">
+            <div class="row">
+                <div class="col-md-9">
+                    <a href="./taskDetails.html" class="forum-item-title">Post 8 - Title</a>
+                    <div class="forum-sub-title">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <br><br><br>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyB0h-8BktUPIkG-75f4AVZp1Psn3FNdErc",
+          authDomain: "testloginweb-d8661.firebaseapp.com",
+          databaseURL: "https://testloginweb-d8661.firebaseio.com",
+          projectId: "testloginweb-d8661",
+          storageBucket: "testloginweb-d8661.appspot.com",
+          messagingSenderId: "24204990156",
+          appId: "1:24204990156:web:7234ebae29595996471469",
+          measurementId: "G-7DZDLW8SYK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="JS/firebaseSignOut.js"></script>
+    <script src="JS/getname.js"></script>
+</body>
+</html>

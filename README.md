@@ -1,2 +1,2 @@
-# LendAHand
-Our submission for Winhacks 2020
+# Winhacks-2020
+Our Submission for Winhacks 2020

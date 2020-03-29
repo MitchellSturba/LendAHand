@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> Task 4  </title>
+  <meta charset="utf-8">
+  <script src="addtask.js"></script>
+  <style>
+  .h{
+    text-align-last: center;
+    font-size: 50px;
+  }
+  .h2{
+    font-size:30px;
+  }
+  .p{
+    font-size: 20px;
+  }
+  body{
+    background-color: white;
+    text-align-last: center;
+  }
+  #output {
+      border: black 5px solid;
+      padding: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-left: 5px;
+      width: auto;
+    }
+  #output p {
+    padding:10px;
+    border: black 2px dashed;
+  }
+  .button{
+    background-color: rosybrown;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px 2px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+  <body>
+    <h2 class="h"> Request Your Task </h2>
+    <textarea id  ="input" rows="5" cols="60" onfocus="this.value=''">Type your task request here!</textarea><br>
+    <button class="button" id="add"> ADD </button> </p>
+    <h2 class="h2"> Added Tasks </h2>
+    <button class="button" id="delete" >Delete Last Task</button>
+    <div id="output"> </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: rgba(#000, .87);
+}
+
+main {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+section {
+    margin: 16px;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(#c0c0c0, .6);
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+h3, h4, h5 {
+    font-weight: 400;
+}
+
+h6 {
+    font-weight: 700;
+}
+
+p.subtext {
+    color: rgba(#9e9e9e, .87);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+p {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+.textAlign_center {
+    text-align: center!important;
+}
+
+html, body {
+    background-color: #f0f2fa;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    font-size: rem(16);
+}
+
+p {
+    line-height: rem(21);
+}
+
+.comments {
+    margin: rem(40) auto 0;
+    max-width: rem(972);
+    padding: 0 rem(20);
+}
+
+.comment-wrap {
+    margin-bottom: rem(20);
+    display: table;
+    width: 100%;
+    min-height: rem(85);
+}
+
+.comment-block {
+    padding: rem(16);
+    background-color: #fff;
+    display: table-cell;
+    vertical-align: top;
+    border-radius: rem(3);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+}
+
+.comment-text {
+    margin-bottom: rem(20);
+}
+
+.bottom-comment {
+    color: #acb4c2;
+    font-size: rem(14);
+}
+
+.comment-name {
+    float: left;
+}
+
+.comment-actions {
+    float: right;
+    list-style: none;
+}

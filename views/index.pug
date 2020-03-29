@@ -1,0 +1,28 @@
+html
+    head
+        title=title
+    body
+        h1=message
+        hr
+        h2=text
+        p
+            | hello world! this is literal html
+            | test code
+        script.
+            if(window.navigator.geolocation){
+                console.log("geolocation available!")
+            }
+            else{
+                console.warn("Geolocation not available!")
+            }
+        each n in list
+            p= n
+        p= person1.firstName
+        p= person2.firstName + ' ' + person2.lastName
+        each person in personList
+            p= person.firstName + person.lastName
+        hr
+        h1 Data from the Firebase Database
+        br
+        each user in userdata
+            p= user.firstName + ' ' + user.lastName
