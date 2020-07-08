@@ -7,7 +7,7 @@ LendAHand is our submission for Winhacks 2020. This mobile app was created by my
 Niaz-Ul-Haque Haque and Zarif Hasan took the lead on the user-side front-end development for our app and designed that look and feel of the website. Here is the design that the users are greeted with when they first open the homepage.
 
 
-![](HomePage.png)
+<img src="Mitch-LendAHand/screenshot.png" width="1000px">
 
 <h2>User Authentication</h2>
 The backend was handled mainly by myself and Tony Alas. We utilized Google Firebase to authorize users who are using the website. Once the user fills out all the required fields correctly on the signup page and clicks the signup button, this function is run in a seperate javascript file that connects with an online database to store the information.
